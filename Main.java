@@ -1,3 +1,5 @@
+import config.Database;
+import entities.repositories.TodoListRepositoryDbImpl;
 import repositories.TodoListRepository;
 import entities.repositories.TodoListRepositoryImpl;
 import entities.services.TodoListService;
@@ -8,16 +10,17 @@ import entities.views.TodoListView; // Fixed typo
 
 public class Main {
     public static void main(String[] args) {
-        // Create an instance of the repository
-        TodoListRepository todoListRepository = new TodoListRepositoryImpl();
+        Database database = new Database("db_nuel", "root", "", "Localhost", "3306");
+        database.setup();
 
-        // Pass the repository instance to the service
+        TodoListRepository todoListRepository = new TodoListRepositoryDbImpl(database);
+
+
         TodoListService todoListService = new TodoListServiceImpl(todoListRepository);
 
-        // Pass the service instance to the view
+
         TodoListView todoListView = (TodoListView) new TodoListTerminalView(todoListService);
 
-        // Run the application
         todoListView.run();
     }
 }
