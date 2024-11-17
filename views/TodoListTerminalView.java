@@ -1,8 +1,7 @@
-package entities.views;
+package views;
 
 import entities.TodoList;
-import entities.services.TodoListService;
-import entities.services.TodoListService;
+import services.TodoListService;
 
 import java.util.Scanner;
 

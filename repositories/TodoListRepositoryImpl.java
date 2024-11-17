@@ -1,4 +1,4 @@
-package entities.repositories;
+package repositories;
 
 import entities.TodoList;
 

@@ -1,11 +1,10 @@
 import config.Database;
-import entities.repositories.TodoListRepositoryDbImpl;
+import repositories.TodoListRepositoryDbImpl;
 import repositories.TodoListRepository;
-import entities.repositories.TodoListRepositoryImpl;
-import entities.services.TodoListService;
-import entities.services.TodoListServiceImpl;
-import entities.views.TodoListTerminalView;
-import entities.views.TodoListView; // Fixed typo
+import services.TodoListService;
+import services.TodoListServiceImpl;
+import views.TodoListTerminalView;
+import views.TodoListView; // Fixed typo
 
 
 public class Main {
